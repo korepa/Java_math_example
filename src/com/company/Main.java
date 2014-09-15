@@ -43,18 +43,22 @@ public class Main {
     public static Data inputBlock() {
 
         // объявим класс
-        Data data = new Data(1,1,1);
+        Data data;
+        int a, b, div;
 
         // вычисляем значение
-        int[] a=new int[6];
         Scanner sc=new Scanner(System.in);
-        System.out.println("Введите числа...");
-        for(int j=0;j<6;j++)
-            a[j]=sc.nextInt();
-        System.out.println("Полученные значения: ");
-        for (int i=0;i<a.length;i++)
-            System.out.println(a[i]);
 
+        System.out.println("Введите первое число (делимое)...");
+        a=sc.nextInt();
+        System.out.println("Введите второе число (делитель)...");
+        b=sc.nextInt();
+        System.out.println("Введите степень исчисления...");
+        div=sc.nextInt();
+
+        // полученные значения
+        System.out.format("Полученные значения: %d, %d, %d\n", a,   b,  div );
+        data = new Data(a, b, div);
         return data;
     }
 }
