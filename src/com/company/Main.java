@@ -50,15 +50,37 @@ public class Main {
         Scanner sc=new Scanner(System.in);
 
         System.out.println("Введите первое число (делимое)...");
-        a=sc.nextInt();
+        a=getInt(sc);
         System.out.println("Введите второе число (делитель)...");
-        b=sc.nextInt();
+        b=getInt(sc);
         System.out.println("Введите степень исчисления...");
-        div=sc.nextInt();
+        div=getInt(sc);
 
         // полученные значения
         System.out.format("Полученные значения: %d, %d, %d\n", a,   b,  div );
         data = new Data(a, b, div);
         return data;
+    }
+
+    private static int getInt(Scanner sc)
+    {
+        for (;;) {
+            if (!sc.hasNextInt()) {
+                System.out.println("Вводите только целые числа больше 0!");
+                sc.next();
+                continue;
+            }
+            int value = sc.nextInt();
+            if (value >= 0) {
+                return value;
+
+            } else {
+                System.out.print("Некорректный ввод!");
+
+            }
+            break;
+        }
+
+        return 0;
     }
 }
