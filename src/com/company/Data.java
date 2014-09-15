@@ -5,7 +5,6 @@ public class Data {
     int first;
     int second;
     int division;
-    double result;
 
     // конструктор
     public Data(int _a, int _b, int _div){
@@ -17,12 +16,7 @@ public class Data {
     // функция для расчета значения дроби
     public double Calculate() {
         // вычисляем значение
-        double res = ((double)first)  / second;
-        return res;
-    }
-
-    // берем результат
-    public double getResult(){
+        double result = ((double)first)  / second;
         return result;
     }
 }

@@ -34,3 +34,7 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+out/production/untitled-4/com/company/Data.class
+out/production/untitled-4/com/company/Main.class
+.idea/workspace.xml
