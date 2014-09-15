@@ -8,7 +8,7 @@ public class Main {
 
         // используемые переменные
         Data data;
-        double result;
+        String result;
 
         // текстовое сообщение
         System.out.println("Пример деления в k-ичной системе счисления");
@@ -17,26 +17,26 @@ public class Main {
         System.out.println("Первый ввод (1-число, 2-число, разрядность): 1 2 8");
         data = new Data(1,2,8);
         result = data.Calculate();
-        System.out.format("Результат дроби a/b: %.2f\n", result);
+        System.out.format("Результат дроби a/b: %s\n", result);
 
         // примеры 2
         System.out.println("Второй ввод (1-число, 2-число, разрядность): 1 12 10");
         data = new Data(1,12,10);
         result = data.Calculate();
-        System.out.format("Результат дроби a/b: %.2f\n", result);
+        System.out.format("Результат дроби a/b: %s\n", result);
 
         // обрабатываем пользовательский ввод
         // ввод 1
         System.out.println("Первый ввод (1-число, 2-число, разрядность) через пробел:");
         data = inputBlock();
         result = data.Calculate();
-        System.out.format("Результат дроби a/b: %.2f\n", result);
+        System.out.format("Результат дроби a/b: %s\n", result);
 
         // ввод 2
         System.out.println("Второй ввод (1-число, 2-число, разрядность) через пробел:");
         data = inputBlock();
         result = data.Calculate();
-        System.out.format("Результат дроби a/b: %.2f\n", result);
+        System.out.format("Результат дроби a/b: %s\n", result);
     }
 
     // функция для расчета значения дроби
